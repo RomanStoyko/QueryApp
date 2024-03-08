@@ -31,7 +31,7 @@ export default function QueryApp(){
                 <BrowserRouter>
                 <HeaderComponent/>
                 <Routes>
-                    <Route path='/' element={<PhoneCheckQuery/>}/>
+                    <Route exact path='/' element={<PhoneCheckQuery/>}/>
                     <Route path='/registerinquery/:id' element={
       
                                 <RegistrateComponent/>
