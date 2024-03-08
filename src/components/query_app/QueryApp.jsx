@@ -10,7 +10,7 @@ import ShowQuery from './components/driverview/ShowQuery'
 import QueryControl from './components/querycontrol/QueryControl'
 import AllQuery from './components/querycontrol/AllQuery'
 import LoginComponent from './components/service/LoginComponent'
-// import AuthProvider, { useAuth } from './security/AuthContext'
+import AuthProvider from './security/AuthContext'
 
 // function AuthenticatedRoute({children}){
 
