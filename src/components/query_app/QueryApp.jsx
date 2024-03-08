@@ -28,7 +28,8 @@ export default function QueryApp(){
     return(
         <div className="QueryApp">
             <AuthProvider>
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
+                    <Link to="/QueteApp"/>
                 <HeaderComponent/>
                 <Routes>
                     <Route path='/' element={<PhoneCheckQuery/>}/>
