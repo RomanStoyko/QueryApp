@@ -11,9 +11,6 @@ function ShowQuery(){
 
     const navigate = useNavigate();
 
-    function handlePhoneChanhe(event){
-        setPhone(event.target.value)
-    }
 
     useEffect(() => setPhoneFromParams(),[id])
 
