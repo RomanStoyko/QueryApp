@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import './style/QueryApp.css'
 
@@ -28,7 +28,8 @@ export default function QueryApp(){
     return(
         <div className="QueryApp">
             <AuthProvider>
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
+                    <Link to="/QueteApp"/>
                 <HeaderComponent/>
                 <Routes>
                     <Route path='/' element={<PhoneCheckQuery/>}/>
