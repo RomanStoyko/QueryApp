@@ -19,7 +19,8 @@ function HeaderComponent(){
             <div className="container">
                 <div className="row">
                     <nav className="navbar navbar-expand-lg">
-                        <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="/">LOGO</a>
+                        {/* <a className="navbar-brand ms-2 fs-2 fw-bold text-black" href="/">LOGO</a> */}
+                        <div className="nav-link ms-2 fs-2 fw-bold text-black" >LOGO</div>
                         <div className="collapse navbar-collapse">
                             <ul className="navbar-nav">
                                 <li className="nav-item fs-5">
