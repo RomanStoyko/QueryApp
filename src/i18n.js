@@ -60,7 +60,7 @@ const resources = {
       "sErorrTitle":"Ми працюємо над помилкой!",
       "sErorrText":"Вибачте за 404. Зверніться до нашої команди за адресою ABC-DEF-GHIJ.",
       "sHome":"Головна",
-      "sQuery":"Керeвання чергою",
+      "sQuery":"Керування чергою",
       "sAllQuery":"Загальна черга", 
       "sLogin": "Логін",
       "sLogout":"Вихід",
