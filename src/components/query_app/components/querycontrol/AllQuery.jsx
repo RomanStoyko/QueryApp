@@ -1,7 +1,15 @@
 import QueryControl from './QueryControl'
-
+import { useTranslation } from 'react-i18next'
 
 function AllQuery(){
+
+    const { t } = useTranslation();
+
+    const sYaTsZ = t('sYaTsZ')
+    const sHTsZ = t('sHTsZ')
+    const sNoTsZ = t('sNoTsZ')
+    const sZhTsZ = t('sZhTsZ')
+    const sNaTsZ = t('sNaTsZ')
 
     return(
         <div className="container">
@@ -9,23 +17,23 @@ function AllQuery(){
            <div className="container text-center">
             <div className="row">
                 <div className="col">
-                    <QueryControl  full={false}/>
+                    <QueryControl  id={sYaTsZ} full={false}/>
                 </div>
                 <div className="col">
-                    <QueryControl id={"HTsZ"} full={false}/>
+                    <QueryControl id={sHTsZ} full={false}/>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <QueryControl id={"NoTsZ"} full={false}/>
+                    <QueryControl id={sNoTsZ} full={false}/>
                 </div>
                 <div className="col">
-                    <QueryControl id={"ZhTsZ"} full={false}/>
+                    <QueryControl id={sZhTsZ} full={false}/>
                 </div>
                 </div>
             <div className="row">
                 <div className="col">
-                    <QueryControl id={"NaTsZ"} full={false}/>
+                    <QueryControl id={sNaTsZ} full={false}/>
                 </div>
             </div>
             </div>

@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'
 
 
 
 
 function PhoneCheckQuery(){
+
+    const { t } = useTranslation();
 
     const [phone, setPhone] = useState("")
 
@@ -15,28 +18,34 @@ function PhoneCheckQuery(){
     }
 
     function handleCheck(){
-        console.log(phone)
-        navigate(`/showquery/${phone}`); 
+        if(phone.trim().length === 0){
+            navigate(`/`); 
+        }else{
+            navigate(`/showquery/${phone}`); 
+        }
     }
 
     function handleRegistr(){
-        console.log("reg " +phone)
-        navigate(`/registerinquery/${phone}`); 
+        if(phone.trim().length === 0){
+            navigate(`/`); 
+        }else{
+            navigate(`/registerinquery/${phone}`);
+        } 
     }
 
     return(
         <div className="PhoneCheckQuery">
-            <h1>Time to check your query</h1>
+            <h1>{t('DriverQ')}</h1>
             <div>
-                <label>Phone number</label>
+                <label>{t('pNumber')}</label>
                 <input type="phone" name="phone" value={phone} onChange={handlePhoneChanhe}/>
 
-                <button className="btn btn-success m-2"  type="button" name="check" onClick={handleCheck}>check</button>
+                <button className="btn btn-success m-2"  type="button" name="check" onClick={handleCheck}>{t('sCheck')}</button>
             </div>
             <div>
                 
-                <h3>Not in query?</h3>
-                <button className="btn btn-warning m-2"  type="button" name="check" onClick={handleRegistr}>registrate</button>
+                <h3>{t('notInQ')}</h3>
+                <button className="btn btn-warning m-2"  type="button" name="check" onClick={handleRegistr}>{t('sRegistrate')}</button>
             </div>
         </div>
     )

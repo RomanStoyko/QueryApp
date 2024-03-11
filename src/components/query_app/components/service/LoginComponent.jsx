@@ -2,7 +2,11 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../security/AuthContext';
 
+import { useTranslation } from 'react-i18next'
+
 function LoginComponent(){
+
+    const { t } = useTranslation();
 
     const [username, setUserName] = useState("");
     const [password, setPassword] = useState("");
@@ -34,19 +38,19 @@ function LoginComponent(){
 
     return(
         <div className="Login">
-             <h1>Time to login</h1>
+             <h1>{t('sLoginTitle')}</h1>
             {showEM && <div className='EM' > Auth Fail. Please check</div>}
             <div className="LoginForm">
                 <div>
-                    <label>User Name</label>
+                    <label>{t('sUserName')}</label>
                     <input type="text" name="username" value={username} onChange={handleUsernameChange}/>
                 </div>
                 <div>
-                    <label>Password</label>
+                    <label>{t('sPassword')}</label>
                     <input type="password" name="password" value={password} onChange={handlePasswordChange}/>
                 </div>
                 <div>
-                    <button type="button" name="login" onClick={handleSubmit}> login</button>
+                    <button className="btn btn-success m-2" name="submit" onClick={handleSubmit}>{t('sLogin')}</button>
                 </div>
             </div>
         </div>

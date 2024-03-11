@@ -1,9 +1,14 @@
+import { useTranslation } from 'react-i18next'
+
 function ErrorComponent(){
+
+    const { t } = useTranslation();
+    
     return(
         <div className="ErrorComponent">
-            <h1>We are working really hard!</h1>
+            <h1>{t('sErorrTitle')}</h1>
             <div>
-                Apologies for 404. Reach out to our team at ABC-DEF-GHIJ.
+            {t('sErorrText')}
             </div>
         </div>
 

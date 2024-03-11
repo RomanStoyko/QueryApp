@@ -1,10 +1,12 @@
 import { useState,useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 
-
+import { useTranslation } from 'react-i18next'
 
 
 function ShowQuery(){
+
+    const { t } = useTranslation();
 
     const {id} = useParams();
     const [phone, setPhone] = useState("")
@@ -26,15 +28,15 @@ function ShowQuery(){
 
     return(
         <div className="PhoneCheckQuery">
-            <h1>Your query</h1>
+            <h1>{t('sYourQuery')}</h1>
             <div>
-                <label>Phone number</label>
+                <label>{t('pNumber')}</label>
                 <input type="phone" name="phone" value={phone} disabled={true}/>
 
                 <div className="NumberInQuery" > 6 </div>
                 <div className="TimeInQuery" > 5:48:16 </div>
             </div>
-            <button className="btn btn-success m-2"  type="button" name="check" onClick={handleReturn}>return</button>
+            <button className="btn btn-success m-2"  type="button" name="check" onClick={handleReturn}>{t('sReturn')}</button>
         </div>
     )
 }

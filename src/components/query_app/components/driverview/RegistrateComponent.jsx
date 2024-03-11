@@ -1,6 +1,8 @@
 import { useState,useEffect } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 
+import { useTranslation } from 'react-i18next'
+
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 // import ToggleButton from 'react-bootstrap/ToggleButton';
@@ -8,6 +10,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 function RegistrateComponent(){
+
+    const { t } = useTranslation();
 
 
     const {id} = useParams();
@@ -17,6 +21,12 @@ function RegistrateComponent(){
     const [date, setDate] = useState(setTime());//"2023-09-19T00:00");
 
     const navigate = useNavigate();
+
+    const sYaTsZ = t('sYaTsZ')
+    const sHTsZ = t('sHTsZ')
+    const sNoTsZ = t('sNoTsZ')
+    const sZhTsZ = t('sZhTsZ')
+    const sNaTsZ = t('sNaTsZ')
 
     function setTime(){
         var now = new Date();
@@ -39,8 +49,7 @@ function RegistrateComponent(){
     }
 
     function handleSubmit(){
-        console.log(radioValue)
-        navigate(`/showquery/${phone}`); 
+        navigate(`/showquery/${phone}`);
     }
 
     function handleBack(){
@@ -53,7 +62,7 @@ function RegistrateComponent(){
     return(
         <div className="container">
             <div>
-            <label>Phone number</label>
+            <label>{t('sYourQuery')}</label>
             <input type="phone" name="phone" value={phone} disabled={true} onChange={handlePhoneChange}/>
             </div>
                 
@@ -79,19 +88,19 @@ function RegistrateComponent(){
             
             <DropdownButton
                 align="end"
-                title="factory select"
+                title={t('sFactorySelect')}
                 id="dropdown-menu-align-end"
                 >
-                <Dropdown.Item eventKey="1" onClick={() => setRadioValue("YaTsZ")}>YaTsZ</Dropdown.Item>
-                <Dropdown.Item eventKey="2"  onClick={() => setRadioValue("HTsZ")}>HTsZ</Dropdown.Item>
-                <Dropdown.Item eventKey="3"  onClick={() => setRadioValue("NoTsZ")}>NoTsZ</Dropdown.Item>
-                <Dropdown.Item eventKey="4"  onClick={() => setRadioValue("ZhTsZ")}>ZhTsZ</Dropdown.Item>
-                <Dropdown.Item eventKey="5"  onClick={() => setRadioValue("NaTsZ")}>NaTsZ</Dropdown.Item>
+                <Dropdown.Item eventKey="1" onClick={() => setRadioValue(sYaTsZ)}>{sYaTsZ}</Dropdown.Item>
+                <Dropdown.Item eventKey="2"  onClick={() => setRadioValue(sHTsZ)}>{sHTsZ}</Dropdown.Item>
+                <Dropdown.Item eventKey="3"  onClick={() => setRadioValue(sNoTsZ)}>{sNoTsZ}</Dropdown.Item>
+                <Dropdown.Item eventKey="4"  onClick={() => setRadioValue(sZhTsZ)}>{sZhTsZ}</Dropdown.Item>
+                <Dropdown.Item eventKey="5"  onClick={() => setRadioValue(sNaTsZ)}>{sNaTsZ}</Dropdown.Item>
             </DropdownButton>
             </div>
             <div className='FactoryText'>{ radioValue} </div>
             <div>
-                <label>Estimatid time</label>
+                <label>{t('sEstimateTime')}</label>
                 <input
                     type="datetime-local"
                     value={date}
@@ -103,8 +112,8 @@ function RegistrateComponent(){
 
 <div>
 
-            <button className="btn btn-success m-2"  type="button" name="submit" onClick={handleSubmit}>submit</button>
-            <button className="btn btn-danger m-2"  type="button" name="back" onClick={handleBack}>back</button>
+            <button className="btn btn-success m-2"  type="button" name="submit" onClick={handleSubmit}>{t('sSubmit')}</button>
+            <button className="btn btn-danger m-2"  type="button" name="back" onClick={handleBack}>{t('sReturn')}</button>
 </div>
         </div>
     )
