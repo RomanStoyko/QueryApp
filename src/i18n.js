@@ -73,7 +73,7 @@ const resources = {
       "sMoveDown":"Рухати ↓",
       "sMoveUp":"Рухати ↑",
       "sCall":"♫",
-      "sQueryControlFactory":"Керeвання чергою заводу",
+      "sQueryControlFactory":"Керування чергою заводу",
       "sQueryFactory":"Черга заводу"          
     }
   }
