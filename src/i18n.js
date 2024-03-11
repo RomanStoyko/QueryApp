@@ -35,7 +35,9 @@ const resources = {
       "sDelete":"Delete",
       "sMoveDown":"Move ↓",
       "sMoveUp":"Move ↑",
-      "sCall":"♫"   
+      "sCall":"♫",
+      "sQueryControlFactory":"Query Control Factory",
+      "sQueryFactory":"Query Factory"
     }
   },
   ua: {
@@ -58,7 +60,7 @@ const resources = {
       "sErorrTitle":"Ми працюємо над помилкой!",
       "sErorrText":"Вибачте за 404. Зверніться до нашої команди за адресою ABC-DEF-GHIJ.",
       "sHome":"Головна",
-      "sQuery":"Керивання чергою",
+      "sQuery":"Керeвання чергою",
       "sAllQuery":"Загальна черга", 
       "sLogin": "Логін",
       "sLogout":"Вихід",
@@ -70,7 +72,9 @@ const resources = {
       "sDelete":"Видалити",
       "sMoveDown":"Рухати ↓",
       "sMoveUp":"Рухати ↑",
-      "sCall":"♫"          
+      "sCall":"♫",
+      "sQueryControlFactory":"Керeвання чергою заводу",
+      "sQueryFactory":"Черга заводу"          
     }
   }
 };

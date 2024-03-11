@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 
 
-function QueryControl({id="YaTsZ", full=true}){
+function QueryControl({id="", full=true}){
 
     const { t } = useTranslation();
 
@@ -11,6 +11,8 @@ function QueryControl({id="YaTsZ", full=true}){
     const sMoveUp = t('sMoveUp')
     const sCall = t('sCall')
 
+
+    const sQtext = full ?   t('sQueryControlFactory') : t('sQueryFactory')
 
     function setTime(min){
         var now = new Date();
@@ -25,7 +27,7 @@ function QueryControl({id="YaTsZ", full=true}){
 
     return(
         <div className="container">
-            <h1>Query {full && "Control"} Factory {id}</h1>           
+            <h1>{sQtext} {id}</h1>           
             <div>
                 <table className="table">
                     <thead>

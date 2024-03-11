@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next'
+
 import './style/QueryApp.css'
 
 import HeaderComponent from './components/service/HeaderComponent';
@@ -25,6 +27,9 @@ import AuthProvider from './security/AuthContext'
 // }
 
 export default function QueryApp(){
+
+    const { t } = useTranslation();
+
     return(
         <div className="QueryApp">
             <AuthProvider>
@@ -44,7 +49,7 @@ export default function QueryApp(){
                     
                     }/> 
                     <Route path='/login' element={<LoginComponent/>}/>
-                    <Route path='/query' element={<QueryControl/>}/>
+                    <Route path='/query' element={<QueryControl id={t('sYaTsZ')}/>}/>
                     <Route path='/allquery' element={<AllQuery/>}/>
                     <Route path='*' element={<ErrorComponent/>}/>
                 </Routes>
