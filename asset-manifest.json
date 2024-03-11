@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/QueteApp/static/css/main.f7d88cda.css",
-    "main.js": "/QueteApp/static/js/main.ddc9ce20.js",
+    "main.js": "/QueteApp/static/js/main.3e4b3e8a.js",
     "static/js/453.80efc53e.chunk.js": "/QueteApp/static/js/453.80efc53e.chunk.js",
     "index.html": "/QueteApp/index.html",
     "main.f7d88cda.css.map": "/QueteApp/static/css/main.f7d88cda.css.map",
-    "main.ddc9ce20.js.map": "/QueteApp/static/js/main.ddc9ce20.js.map",
+    "main.3e4b3e8a.js.map": "/QueteApp/static/js/main.3e4b3e8a.js.map",
     "453.80efc53e.chunk.js.map": "/QueteApp/static/js/453.80efc53e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7d88cda.css",
-    "static/js/main.ddc9ce20.js"
+    "static/js/main.3e4b3e8a.js"
   ]
 }
